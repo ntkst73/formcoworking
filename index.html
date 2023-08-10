@@ -1,0 +1,162 @@
+<!DOCTYPE html><html class="no-js" lang="ru_RU" prefix="og: http://ogp.me/ns#"><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bundle.css">
+</head>
+<body class="page-peregovorki" attr="peregovorki">
+    <a href="#?w=860164" rel="860164" class="poplight_mr" >
+        <div class="btn">Арендовать</div>
+    </a>
+
+<div id="860164" class="popup_block popup_meetingroom" attr-price="1100" attr-low-price="800" attr-loc="Охта" attr-cap="Переговорная №1-1 на 5 мест" attr-adress="Санкт-Петербург, Малоохтинский пр., 68">
+    <div id="close_form"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px">
+        <style type="text/css">
+            .st0{fill:none;stroke:#F26723;stroke-width:2;stroke-miterlimit:10;stroke-width:2px;}
+        </style>
+        <line class="st0" x1="0" y1="0" x2="25" y2="25"/>
+        <line class="st0" x1="25" y1="0" x2="0" y2="25"/>
+        </svg>
+        </div>
+    <div class="form-header">
+        <h4>Аренда рабочего места</h4>
+        <br>
+        <div class="rent-summary" id="rs_860164">
+            <div><b>Дата</b> <span id="rs-date_860164"></span></div>
+            <div><b>время</b> <span id="rs-time_860164"></span>, <br class="rent-summary-br"> </div>
+            <div><b>стоимость</b> <span id="rs-price_860164"></span><br><br></div>
+        </div>
+        <div class="mr_calendar">
+            <div class="mr_timeline">
+                <div>9:00</div><div>10:00</div><div>11:00</div><div>12:00</div><div>13:00</div><div>14:00</div><div>15:00</div><div>16:00</div><div>17:00</div><div>18:00</div><div>19:00</div><div>20:00</div>
+            </div>
+            <div class="mr_dateline w0 visible" attr-week="0"></div>
+            <div class="mr_dates w0 visible"></div>
+            <div class="mr_dateline w1" attr-week="1"></div>
+            <div class="mr_dates w1"></div>
+            <div class="mr_dateline w2" attr-week="2"></div>
+            <div class="mr_dates w2"></div>
+            <svg class="prev_week" xmlns="http://www.w3.org/2000/svg" width="25px" height="11px">
+                <style type="text/css">
+                    .st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+                </style>
+                <line class="st0" x1="25" y1="5.5" x2="1" y2="5.5"/>
+                <polyline class="st0" points="5.5,1 1,5.5 5.5,10 "/>
+                </svg>
+                <svg class="next_week active" xmlns="http://www.w3.org/2000/svg" width="25px" height="11px">
+                    <style type="text/css">
+                        .st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+                    </style>
+                    <line class="st0" x1="0" y1="5.5" x2="24" y2="5.5"/>
+                    <polyline class="st0" points="19.5,10 24,5.5 19.5,1 "/>
+                    </svg>
+        </div>
+    </div>
+    <form method="POST" class="meetingroom_form" onsubmit>
+        <div class="form-group">
+            <label for="nameFF">Ваше имя<sup>*</sup>:</label>
+            <input type="text" name="nameFF" placeholder x-autocompletetype="name" required>
+        </div>
+        <div class="form-group">
+            <label for="telFF">Номер моб. телефона<sup>*</sup>:</label>
+            <input type="tel" name="telFF" class="tel_num" placeholder="+7 (812) 123-45-66" x-autocompletetype="tel" required>
+        </div>
+        <div class="form-group">
+            <label for="emailFF">Email<sup>*</sup>:</label>
+            <input type="email" name="emailFF" placeholder x-autocompletetype="email">
+        </div>
+        <!-- <div class="form-group checkbox-group" style="display: inline-block;">
+            <label>Дополнительные опции:</label>
+            <div class="checkbox-group-wrapper">
+                <div class="checkbox-group-item">
+                                    <input type="checkbox" id="facil__1_860164" name="facil__1_860164">
+                                    <label class="checkbox" for="facil__1_860164">Флип-чарт</label>
+                                </div><div class="checkbox-group-item">
+                                    <input type="checkbox" id="facil__2_860164" name="facil__2_860164">
+                                    <label class="checkbox" for="facil__2_860164">4k UltraHD телевизор 55” с AirPlay</label>
+                                </div>
+            </div>
+        </div> -->
+        <input type="text" style="display:none" name="subjFF" value="Аренда переговорки">
+        <input type="text" style="display:none" name="officeFF" value="Переговорка">
+        <input type="text" style="display:none" name="urlFF" value>
+        <button class="submit btn" type="submit">Отправить заявку</button>
+    </form>
+</div>
+</div>
+
+<!-- <style>
+.popup_meetingroom .form-group:nth-of-type(2):after {content: 'Для СМС кода';}
+.wrong_sms_code:before {content: 'Код указан неверно';}
+</style> -->
+
+<div class="popup_codeinput popup_block">
+    <div class="close_form"><img src="fonts/img__close--orange.svg" alt="Закрыть" title="Закрыть"></div>
+    <div class="form-title">Подтверждение бронирования</div>
+    <div id="ci-request-info">
+        <div id="ci-bio"></div>
+        <div id="ci-date-time"></div>
+        <div id="ci-adress"></div>
+        <div id="ci-cap"></div>
+        <div id="ci-options">Дополнительные опции:<br></div>
+        <div id="ci-label">Стоимость аренды:</div>
+        <div id="ci-price"> ₽</div>
+    </div>
+    <form method="POST" class="smscode_form" onsubmit>
+        <div class="form-group">
+            <label for="codeFF">Для подтверждения бронирования,<br>введите код из WhatsApp или СМС:</label>
+            <div id="input-wrapper">
+                <input type="text" maxlength="4" pattern="[0-9]*" name="codeFF" placeholder="0000" required>
+            </div>
+            <button class="submit btn" type="submit">Отправить</button>
+        </div>
+        <input name="subjFF" type="text" style="display:none" value="СМС код подтверждения">
+        <input name="urlFF" type="text" style="display:none" value>
+    </form>
+    <!-- <div class="mr_conferm">
+        <div>Ждём вас!!</div>
+        <div>Бронирование успешно подтверждено</div>
+    </div> -->
+</div>
+
+
+
+<div class="popup_conferm">
+    <div id="close_form"><img src="fonts/img__close--orange.svg" alt="Закрыть" title="Закрыть"></div>
+    <div class="form-title">Ваш запрос<br>успешно отправлен!</div>
+    <div id="close_form_link">Закрыть окно</div>
+</div>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.0/?load=package.full&amp;lang=ru-RU" type="text/javascript"></script>
+<!-- <script src="https://api-maps.yandex.ru/2.1?apikey=d27bc46b-9b61-4092-9cd3-dd4ff76247ab&lang=ru-RU" type="text/javascript"></script> -->
+    
+
+
+
+
+
+
+
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/common.js"></script>
+
+
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAPuDi5syU6g8smexUHWk0LA8JR7u20ps"></script>
+<script src="js/infobubble.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/moment-timezone-with-data-10-year-range.min.js"></script>
+<script src="js/meetingrooms.js"></script>
+<script src="./js/Notiflix-main/dist/notiflix-3.2.6.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/notiflix@2.7.0/dist/notiflix.min.js"></script>
+<script src="./js/Notiflix-main/dist/notiflix-notify-aio-3.2.6.min.js"></script>
+
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter43858464 = new Ya.Metrika({ id:43858464, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/43858464" style="position:absolute; left:-9999px;" alt></div></noscript> <!-- /Yandex.Metrika counter -->
+<!-- Render time: 0,1784 s -->
+
+
+
+</body></html>
