@@ -2,85 +2,286 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/bundle.css">
+    <link href="https://fonts.googleapis.com/css?family=Source Code Pro:400,500,700" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        [style*="Source Code Pro"] {
+            font-family: "Source Code Pro", sans-serif !important;
+        }
+    </style>
 </head>
-<body class="page-peregovorki" attr="peregovorki">
-    <a href="#?w=860164" rel="860164" class="poplight_mr" >
+<body class="page-peregovorki page-index" attr="peregovorki">
+    <!-- <a href="#?w=860164" rel="860164" class="poplight_mr" >
         <div class="btn">Арендовать</div>
-    </a>
+    </a> -->
 
-<div id="860164" class="popup_block popup_meetingroom" attr-price="1100" attr-low-price="800" attr-loc="Охта" attr-cap="Переговорная №1-1 на 5 мест" attr-adress="Санкт-Петербург, Малоохтинский пр., 68">
-    <div id="close_form"><svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px">
-        <style type="text/css">
-            .st0{fill:none;stroke:#F26723;stroke-width:2;stroke-miterlimit:10;stroke-width:2px;}
-        </style>
-        <line class="st0" x1="0" y1="0" x2="25" y2="25"/>
-        <line class="st0" x1="25" y1="0" x2="0" y2="25"/>
-        </svg>
+<div id="860164" class="popup_block popup_meetingroom popup_block__white-background " attr-price="1100" attr-low-price="800" attr-loc="Охта" attr-cap="Переговорная №1-1 на 5 мест" attr-adress="Санкт-Петербург, Малоохтинский пр., 68">
+    <div id="close_form">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.6 28.5L7.5 26.4L15.9 18L7.5 9.6L9.6 7.5L18 15.9L26.4 7.5L28.5 9.6L20.1 18L28.5 26.4L26.4 28.5L18 20.1L9.6 28.5Z" fill="black"/>
+            </svg>
         </div>
     <div class="form-header">
         <h4>Аренда рабочего места</h4>
-        <br>
-        <div class="rent-summary" id="rs_860164">
-            <div><b>Дата</b> <span id="rs-date_860164"></span></div>
-            <div><b>время</b> <span id="rs-time_860164"></span>, <br class="rent-summary-br"> </div>
-            <div><b>стоимость</b> <span id="rs-price_860164"></span><br><br></div>
+        <div class="select">
+            <div class="select_time">
+                <div class="btn">2 часа</div>
+                <div class="btn">4 часа</div>
+                <div class="btn">Весь день</div>
+            </div>
+            <div class="select_slot-info">
+                <div class="select_slot-info_object">
+                    <div class="select_slot-info_square slot__available"></div>
+                    <div class="select_slot-text">- доступно</div>
+                </div>
+                <div class="select_slot-info_object">
+                    <div class="select_slot-info_square slot__chosen"></div>
+                    <div class="select_slot-text">- выбрано</div>
+                </div>
+                <div class="select_slot-info_object">
+                    <div class="select_slot-info_square slot__unavailable"></div>
+                    <div class="select_slot-text">- недоступно</div>
+                </div>
+            </div>
         </div>
         <div class="mr_calendar">
             <div class="mr_timeline">
-                <div>9:00</div><div>10:00</div><div>11:00</div><div>12:00</div><div>13:00</div><div>14:00</div><div>15:00</div><div>16:00</div><div>17:00</div><div>18:00</div><div>19:00</div><div>20:00</div>
+                <div>9:00</div>
+                <div>10:00</div>
+                <div>11:00</div>
+                <div>12:00</div>
+                <div>13:00</div>
+                <div>14:00</div>
+                <div>15:00</div>
+                <div>16:00</div>
+                <div>17:00</div>
+                <div>18:00</div>
+                <div>19:00</div>
+                <div>20:00</div>
             </div>
-            <div class="mr_dateline w0 visible" attr-week="0"></div>
-            <div class="mr_dates w0 visible"></div>
-            <div class="mr_dateline w1" attr-week="1"></div>
-            <div class="mr_dates w1"></div>
-            <div class="mr_dateline w2" attr-week="2"></div>
-            <div class="mr_dates w2"></div>
-            <svg class="prev_week" xmlns="http://www.w3.org/2000/svg" width="25px" height="11px">
-                <style type="text/css">
-                    .st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
-                </style>
-                <line class="st0" x1="25" y1="5.5" x2="1" y2="5.5"/>
-                <polyline class="st0" points="5.5,1 1,5.5 5.5,10 "/>
+            <svg class="prev_week active" width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.292892 7.29289C-0.0976315 7.68342 -0.0976315 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM21 7L1 7V9L21 9V7Z" fill="black"/>
                 </svg>
-                <svg class="next_week active" xmlns="http://www.w3.org/2000/svg" width="25px" height="11px">
-                    <style type="text/css">
-                        .st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
-                    </style>
-                    <line class="st0" x1="0" y1="5.5" x2="24" y2="5.5"/>
-                    <polyline class="st0" points="19.5,10 24,5.5 19.5,1 "/>
+                <svg class="next_week active" width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.7071 8.70711C21.0976 8.31658 21.0976 7.68342 20.7071 7.29289L14.3431 0.928932C13.9526 0.538408 13.3195 0.538408 12.9289 0.928932C12.5384 1.31946 12.5384 1.95262 12.9289 2.34315L18.5858 8L12.9289 13.6569C12.5384 14.0474 12.5384 14.6805 12.9289 15.0711C13.3195 15.4616 13.9526 15.4616 14.3431 15.0711L20.7071 8.70711ZM20 7L0 7V9L20 9V7Z" fill="black"/>
                     </svg>
-        </div>
-    </div>
-    <form method="POST" class="meetingroom_form" onsubmit>
-        <div class="form-group">
-            <label for="nameFF">Ваше имя<sup>*</sup>:</label>
-            <input type="text" name="nameFF" placeholder x-autocompletetype="name" required>
-        </div>
-        <div class="form-group">
-            <label for="telFF">Номер моб. телефона<sup>*</sup>:</label>
-            <input type="tel" name="telFF" class="tel_num" placeholder="+7 (812) 123-45-66" x-autocompletetype="tel" required>
-        </div>
-        <div class="form-group">
-            <label for="emailFF">Email<sup>*</sup>:</label>
-            <input type="email" name="emailFF" placeholder x-autocompletetype="email">
-        </div>
-        <!-- <div class="form-group checkbox-group" style="display: inline-block;">
-            <label>Дополнительные опции:</label>
-            <div class="checkbox-group-wrapper">
-                <div class="checkbox-group-item">
-                                    <input type="checkbox" id="facil__1_860164" name="facil__1_860164">
-                                    <label class="checkbox" for="facil__1_860164">Флип-чарт</label>
-                                </div><div class="checkbox-group-item">
-                                    <input type="checkbox" id="facil__2_860164" name="facil__2_860164">
-                                    <label class="checkbox" for="facil__2_860164">4k UltraHD телевизор 55” с AirPlay</label>
-                                </div>
+            <div class="mr_dateline w0 visible" attr-week="0">
+                <p>
+                    <span class="date">07.08</span>
+                    <span class="week_day">ПН</span>
+                </p>
+                <p>
+                    <span class="date">08.08</span>
+                    <span class="week_day">ВТ</span>
+                </p>
+                <p>
+                    <span class="date">09.08</span>
+                    <span class="week_day">СР</span>
+                </p>
+                <p>
+                    <span class="date">10.08</span>
+                    <span class="week_day">ЧТ</span>
+                </p>
+                <p>
+                    <span class="date">11.08</span>
+                    <span class="week_day">ПТ</span>
+                </p>
+                <p>
+                    <span class="date">12.08</span>
+                    <span class="week_day">Сб</span>
+                </p>
+                <p>
+                    <span class="date">13.08</span>
+                    <span class="week_day">вс</span>
+                </p>
             </div>
-        </div> -->
-        <input type="text" style="display:none" name="subjFF" value="Аренда переговорки">
-        <input type="text" style="display:none" name="officeFF" value="Переговорка">
-        <input type="text" style="display:none" name="urlFF" value>
-        <button class="submit btn" type="submit">Отправить заявку</button>
-    </form>
+            <div class="mr_dates">
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f checked"></div>
+                <div class="mr_d_f checked"></div>
+                <div class="mr_d_f checked"></div>
+                <div class="mr_d_f checked"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_f"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+                <div class="mr_d_u"></div>
+            </div>
+        </div>
+        <div class="rent-summary" id="rs_860164">
+            <div>
+                <b>Дата</b> <span id="rs-date_860164">10.08.2023 г</span>
+            </div>
+            <div>
+                <b>Время</b> <span id="rs-time_860164">12:00 - 14:00</span>
+            </div>
+            <div>
+                <b>Стоимость</b> <span id="rs-price_860164">300 ₽</span>
+            </div>
+        </div>
+
+        <div class="next-btn-block">
+            <div class="btn">Продолжить</div>
+        </div>
+
+    </div>
 </div>
 </div>
 
