@@ -3070,12 +3070,11 @@ input, textarea {
     border: none;
     width: 100%}
 .popup_block {
-    display: none;
+    /* display: none; */
     background: #FBBF5D;
     padding: 30px 40px 40px;
     float: left;
     position: fixed;
-    top: 50%;
     left: calc(50% - 250px);
     color: #000;
     width: 500px;
@@ -3084,9 +3083,14 @@ input, textarea {
     z-index: 21;
     box-sizing: border-box;
 }
+
+.popup_block__white-background {
+    background: white;
+}
 .popup_block.popup_meetingroom {
-    width: 760px;
-    left: calc(50% - 380px);
+    max-width: 1196px;
+    width: 100%;
+    left: calc(50% - min(598px, 50%));
 }
 .popup_block.popup_meetingroom img {
     width: auto;
@@ -3345,40 +3349,57 @@ h4 .capacity br {
     justify-content: space-between;
     margin-left: 115px;
     width: 100%;
-    font-size: 14px;
-    margin-bottom: 6px;
+    margin-bottom: 12px;
+    font-size: 18px;
 }
 .mr_timeline div {
     width: calc(100% / 12);
 }
 .mr_dateline {
     color: black;
-    width: 108px;
     letter-spacing: 1px;
-    margin-right: 8px;
+    margin-right: 12px;
     display: none;
     flex-direction: column;
     justify-content: space-around;
 }
 .mr_dateline p {
     margin: 0;
+    width: 103px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mr_dateline .date {
+    font-size: 20px;
+    font-family: 'Source Code Pro',Arial,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;   
 }
 .mr_dateline .week_day {
-    color: #c6c6c6;
+    color: rgba(0, 0, 0, 0.30);
+    font-family: 'Source Code Pro',Arial,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.4px;
     text-transform: uppercase;
-    font-size: 14px;
-    float: right;
-    margin-top: 2px;
 }
 .mr_dates {
-    display: none;
+    /* display: none; */
+    display: flex;
     flex-wrap: wrap;
-    width: calc(100% - 103px - 13px);
+    gap: 1px;
+    width: calc(100% - 103px - 12px);
     border-bottom: 1px solid white;
     border-left: 1px solid white;
 }
 [class^='mr_d_'] {
-    width: calc(100% / 24);
+    width: calc((100% - 23px) / 24);
     overflow: hidden;
     margin: 0;
     border-top: 1px solid white;
@@ -3429,7 +3450,7 @@ h4 .capacity br {
     position: absolute;
     opacity: .2;
     left: 0;
-    top: 0;
+    top: 2px;
 }
 .prev_week.active {
     cursor: pointer;
@@ -3437,8 +3458,8 @@ h4 .capacity br {
 }
 .next_week {
     position: absolute;
-    left: 77px;
-    top: 0;
+    left: 40px;
+    top: 2px;
     opacity: .2;
 }
 .next_week.active {
@@ -3466,12 +3487,19 @@ h4 .capacity br {
     display: flex;
 }
 .rent-summary {
-    display: none;
-    justify-content: space-between;
+    /* display: none; */
+    display: flex;
+    align-items: center;
     color: black;
     margin-bottom: 15px;
     text-align: right;
     font-size: 12px;
+    gap: 12px;
+}
+.rent-summary div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rent-summary b {
@@ -3482,6 +3510,10 @@ h4 .capacity br {
     font-weight: 500;
     letter-spacing: 0.4px;
     font-size: 20px;
+    font-family: 'Source Code Pro',Arial,sans-serif;
+    line-height: 22px; 
+    text-transform: uppercase;
+    flex-grow: 0;
 }
 
 .rent-summary span {
@@ -3489,11 +3521,113 @@ h4 .capacity br {
     border-top: 1px solid #000;
     border-right: 1px solid #000;
     border-bottom: 1px solid #000;
-    padding: 10px 10px;
     font-size: 20px;
-    margin-left: -3px;
+    margin-left: -1px;
     color: #000;
     font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    height: 46px;
+    line-height: 46px;
+    font-family: 'Source Code Pro',Arial,sans-serif;
+    flex-grow: 1;
+}
+
+.rent-summary > :nth-child(1) {
+    flex-grow: 36;
+}
+.rent-summary > :nth-child(2) {
+    flex-grow: 35;
+}
+.rent-summary > :nth-child(3) {
+    flex-grow: 29;
+}
+
+.next-btn-block {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.next-btn-block .btn {
+    font-family: 'Source Code Pro',Arial,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: uppercase;
+    display: flex;
+}
+
+.select {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-direction: row;
+}
+
+@media (max-width: 1070px) {
+    .select {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.select_time {
+    display: flex;
+    gap: 12px;
+}
+
+.select_time .btn {
+    width: 140px;
+    height: 46px;
+    font-size: 20px;
+    line-height: 22px;
+    text-transform: uppercase; 
+    margin-top: 0;
+    display: flex;
+}
+
+.select_time .btn:hover {
+    border: none;
+}
+
+.select_slot-info {
+    display: flex;
+    gap: 12px;
+}
+
+.select_slot-info_square {
+    height: 44px;
+    width: 44px;
+}
+
+.slot__available {
+    background-color: #00000033;
+}
+
+.slot__unavailable {
+    background-color: #00000080;
+}
+
+.slot__chosen {
+    background-color: #FBBF5D;
+}
+
+.select_slot-info_object {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.select_slot-text {
+    font-family: 'Source Code Pro',Arial,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
 }
 
 [id^=rs-date_], [id^=rs-time_], [id^=rs-price_] {
@@ -3507,7 +3641,7 @@ h4 .capacity br {
 .form-header {
     background-color: white;
     margin: -30px -40px 15px;
-    padding: 30px 40px 0px;
+    padding: 30px 24px 0px;
 }
 .form-header img {
     margin: 0 -40px;
@@ -3516,9 +3650,10 @@ h4 .capacity br {
 .form-header h4 {
     color: black;
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 54px;
     font-size: 36px;
     text-transform: uppercase;
+    font-family: 'Source Code Pro',Arial,sans-serif;
 }
 
 .form-off-price {
@@ -4260,6 +4395,15 @@ footer .comunication .mail img {
     flex-direction: column;
     margin-bottom: 39px;
 }
+.mr_timeline div {
+    color: #000;
+    font-family: 'Source Code Pro',Arial,sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.8px;
+    text-transform: uppercase;
+}
 .mr_calendar .mr_timeline div {
     width: 100%}
 .mr_calendar .mr_dateline {
@@ -4273,9 +4417,22 @@ footer .comunication .mail img {
 .mr_calendar .mr_dateline p {
     text-align: center;
 }
+
 .mr_calendar .mr_dateline .week_day {
     display: block;
-    float: none;
+    /* float: none; */
+    /* margin-top: 23px;
+    margin-right: 12px;
+    width: 25px;
+    color: rgba(0, 0, 0, 0.30);
+    font-family: 'Source Code Pro',Arial,sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+    background-color: pink */
+    /* text-transform: uppercase; */
 }
 .mr_calendar .mr_dates {
     width: calc(100% - 50px);
